@@ -15,13 +15,13 @@ sudo apt-get install nginx zip unzip pwgen -y
 echo "Configuring Nginx"
 sleep 2;
 cd /etc/nginx/sites-available/
-sudo wget -O "$DOMAIN" default
+sudo wget -O "$DOMAIN" https://raw.githubusercontent.com/mayank671/wordpress-lemp-on-ubuntu/master/default
 sudo sed -i -e "s/example.com/$DOMAIN/" "$DOMAIN"
 sudo sed -i -e "s/www.example.com/www.$DOMAIN/" "$DOMAIN"
 sudo ln -s /etc/nginx/sites-available/"$DOMAIN" /etc/nginx/sites-enabled/
 sudo mkdir /etc/nginx/mayankkr
-sudo wget general.conf
-sudo wget php_fastcgi.conf
+sudo wget https://raw.githubusercontent.com/mayank671/wordpress-lemp-on-ubuntu/master/general.conf
+sudo wget https://raw.githubusercontent.com/mayank671/wordpress-lemp-on-ubuntu/master/php_fastcgi.conf
 
 sudo mkdir -p /var/www/"$DOMAIN"/public
 cd /var/www/"$DOMAIN/public"
