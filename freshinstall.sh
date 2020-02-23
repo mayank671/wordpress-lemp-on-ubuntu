@@ -20,6 +20,7 @@ sudo sed -i -e "s/example.com/$DOMAIN/" "$DOMAIN"
 sudo sed -i -e "s/www.example.com/www.$DOMAIN/" "$DOMAIN"
 sudo ln -s /etc/nginx/sites-available/"$DOMAIN" /etc/nginx/sites-enabled/
 sudo mkdir /etc/nginx/mayankkr
+cd /etc/nginx/mayankkr
 sudo wget https://raw.githubusercontent.com/mayank671/wordpress-lemp-on-ubuntu/master/general.conf
 sudo wget https://raw.githubusercontent.com/mayank671/wordpress-lemp-on-ubuntu/master/php_fastcgi.conf
 
